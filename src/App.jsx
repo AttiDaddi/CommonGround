@@ -8,7 +8,7 @@ import './App.css';
 function App() {
   return (
     <PreferencesProvider>
-      <Router>
+      <Router basename="/CommonGround">
         <div className="app">
           <Routes>
             <Route path="/" element={<LandingPage />} />

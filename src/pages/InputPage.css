@@ -1,0 +1,239 @@
+.input-page {
+  min-height: 100vh;
+  padding: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.input-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding-top: 1rem;
+}
+
+.back-button {
+  background: transparent;
+  border: 1px solid #444;
+  color: #888;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.back-button:hover {
+  border-color: #667eea;
+  color: #667eea;
+}
+
+.input-header h1 {
+  font-size: 1.5rem;
+  margin: 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.input-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-bottom: 3rem;
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-section label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #aaa;
+}
+
+.name-input {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  color: inherit;
+  transition: border-color 0.2s;
+}
+
+.name-input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.section-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.section-divider::before,
+.section-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #333, transparent);
+}
+
+.section-divider span {
+  color: #667eea;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.genre-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.genre-chip {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 20px;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #888;
+}
+
+.genre-chip:hover {
+  border-color: #667eea;
+  color: #667eea;
+}
+
+.genre-chip.selected {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: transparent;
+  color: white;
+}
+
+.submit-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.submit-button:hover:not(.disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+}
+
+.submit-button.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: #333;
+}
+
+/* Mobile-first responsive adjustments */
+@media (max-width: 480px) {
+  .input-page {
+    padding: 0.75rem;
+    padding-top: env(safe-area-inset-top, 0.75rem);
+    padding-bottom: env(safe-area-inset-bottom, 2rem);
+  }
+
+  .input-header {
+    padding-top: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .input-header h1 {
+    font-size: 1.25rem;
+  }
+
+  .back-button {
+    /* Minimum touch target */
+    min-height: 44px;
+    min-width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .name-input {
+    /* Larger touch target */
+    padding: 1rem;
+    font-size: 16px; /* Prevents iOS zoom on focus */
+  }
+
+  .genre-grid {
+    gap: 0.6rem;
+  }
+
+  .genre-chip {
+    /* Larger touch targets for mobile */
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+    min-height: 40px;
+  }
+
+  .genre-chip:active {
+    transform: scale(0.95);
+  }
+
+  .submit-button {
+    width: 100%;
+    padding: 1.1rem 2rem;
+    font-size: 1.1rem;
+    min-height: 52px;
+    position: sticky;
+    bottom: 1rem;
+  }
+
+  .submit-button:active:not(.disabled) {
+    transform: scale(0.98);
+  }
+
+  .section-divider {
+    margin: 0.75rem 0;
+  }
+
+  .input-content {
+    gap: 1.25rem;
+    padding-bottom: 5rem; /* Space for sticky button */
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .name-input {
+    background: #f8f8f8;
+    border-color: #ddd;
+  }
+
+  .genre-chip {
+    background: #f0f0f0;
+    border-color: #ddd;
+    color: #666;
+  }
+
+  .back-button {
+    border-color: #ddd;
+    color: #666;
+  }
+
+  .input-section label {
+    color: #666;
+  }
+}

@@ -1,0 +1,132 @@
+.tag-input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tag-input-container label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #aaa;
+}
+
+.tag-input-wrapper {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 0.5rem;
+  min-height: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: border-color 0.2s;
+}
+
+.tag-input-wrapper:focus-within {
+  border-color: #667eea;
+}
+
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tag {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.tag-remove {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  padding: 0;
+  line-height: 1;
+}
+
+.tag-remove:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.tag-input {
+  background: transparent;
+  border: none;
+  color: inherit;
+  font-size: 0.95rem;
+  padding: 0.25rem;
+  outline: none;
+  width: 100%;
+}
+
+.tag-input::placeholder {
+  color: #555;
+}
+
+.input-hint {
+  font-size: 0.75rem;
+  color: #555;
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+  .tag-input-wrapper {
+    padding: 0.75rem;
+    min-height: 60px;
+  }
+
+  .tag {
+    padding: 0.4rem 0.7rem;
+    font-size: 0.9rem;
+  }
+
+  .tag-remove {
+    /* Larger touch target */
+    width: 24px;
+    height: 24px;
+    font-size: 0.8rem;
+  }
+
+  .tag-input {
+    font-size: 16px; /* Prevents iOS zoom */
+    padding: 0.5rem 0.25rem;
+    min-height: 44px;
+  }
+
+  .tags-container {
+    gap: 0.5rem;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .tag-input-wrapper {
+    background: #f8f8f8;
+    border-color: #ddd;
+  }
+
+  .tag-input-container label {
+    color: #666;
+  }
+
+  .tag-input::placeholder {
+    color: #aaa;
+  }
+
+  .input-hint {
+    color: #aaa;
+  }
+}

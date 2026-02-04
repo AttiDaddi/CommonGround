@@ -146,6 +146,76 @@
   background: #333;
 }
 
+/* Mobile-first responsive adjustments */
+@media (max-width: 480px) {
+  .input-page {
+    padding: 0.75rem;
+    padding-top: env(safe-area-inset-top, 0.75rem);
+    padding-bottom: env(safe-area-inset-bottom, 2rem);
+  }
+
+  .input-header {
+    padding-top: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .input-header h1 {
+    font-size: 1.25rem;
+  }
+
+  .back-button {
+    /* Minimum touch target */
+    min-height: 44px;
+    min-width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .name-input {
+    /* Larger touch target */
+    padding: 1rem;
+    font-size: 16px; /* Prevents iOS zoom on focus */
+  }
+
+  .genre-grid {
+    gap: 0.6rem;
+  }
+
+  .genre-chip {
+    /* Larger touch targets for mobile */
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+    min-height: 40px;
+  }
+
+  .genre-chip:active {
+    transform: scale(0.95);
+  }
+
+  .submit-button {
+    width: 100%;
+    padding: 1.1rem 2rem;
+    font-size: 1.1rem;
+    min-height: 52px;
+    position: sticky;
+    bottom: 1rem;
+  }
+
+  .submit-button:active:not(.disabled) {
+    transform: scale(0.98);
+  }
+
+  .section-divider {
+    margin: 0.75rem 0;
+  }
+
+  .input-content {
+    gap: 1.25rem;
+    padding-bottom: 5rem; /* Space for sticky button */
+  }
+}
+
 @media (prefers-color-scheme: light) {
   .name-input {
     background: #f8f8f8;

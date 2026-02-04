@@ -82,6 +82,36 @@
   color: #555;
 }
 
+/* Mobile adjustments */
+@media (max-width: 480px) {
+  .tag-input-wrapper {
+    padding: 0.75rem;
+    min-height: 60px;
+  }
+
+  .tag {
+    padding: 0.4rem 0.7rem;
+    font-size: 0.9rem;
+  }
+
+  .tag-remove {
+    /* Larger touch target */
+    width: 24px;
+    height: 24px;
+    font-size: 0.8rem;
+  }
+
+  .tag-input {
+    font-size: 16px; /* Prevents iOS zoom */
+    padding: 0.5rem 0.25rem;
+    min-height: 44px;
+  }
+
+  .tags-container {
+    gap: 0.5rem;
+  }
+}
+
 @media (prefers-color-scheme: light) {
   .tag-input-wrapper {
     background: #f8f8f8;

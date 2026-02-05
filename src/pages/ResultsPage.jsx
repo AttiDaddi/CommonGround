@@ -41,6 +41,11 @@ function ResultsPage() {
     }
   };
 
+  const formatWarnings = (warnings = []) =>
+    warnings
+      .map(warning => warning.charAt(0).toUpperCase() + warning.slice(1))
+      .join(', ');
+
   if (loading) {
     return (
       <div className="results-page">
@@ -113,6 +118,15 @@ function ResultsPage() {
             )}
 
             <p className="description">{rec.description}</p>
+
+            {rec.warnings && rec.warnings.length > 0 && (
+              <div className="warning-box">
+                <span className="warning-label">Heads up!</span>
+                <span className="warning-text">
+                  We noticed mentions of {formatWarnings(rec.warnings)} in this recommendation.
+                </span>
+              </div>
+            )}
 
             <div className="explanation">
               <span className="why-label">Why this works:</span>

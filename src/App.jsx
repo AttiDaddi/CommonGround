@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { PreferencesProvider } from './context/PreferencesContext';
 import LandingPage from './pages/LandingPage';
 import InputPage from './pages/InputPage';
@@ -8,7 +8,7 @@ import './App.css';
 function App() {
   return (
     <PreferencesProvider>
-      <Router basename="/CommonGround">
+      <Router>
         <div className="app">
           <Routes>
             <Route path="/" element={<LandingPage />} />

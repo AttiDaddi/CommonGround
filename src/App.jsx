@@ -6,9 +6,13 @@ import ResultsPage from './pages/ResultsPage';
 import './App.css';
 
 function App() {
+  const baseUrl = import.meta.env.BASE_URL === '/'
+    ? '/'
+    : import.meta.env.BASE_URL.replace(/\/$/, '');
+
   return (
     <PreferencesProvider>
-      <Router basename="/CommonGround">
+      <Router basename={baseUrl}>
         <div className="app">
           <Routes>
             <Route path="/" element={<LandingPage />} />

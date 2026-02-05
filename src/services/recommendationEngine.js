@@ -9,7 +9,8 @@ const MOVIE_DATABASE = [
     keywords: ["psychological", "twist-ending", "violence", "identity", "mind-bending"],
     actors: ["Brad Pitt", "Edward Norton", "Helena Bonham Carter"],
     director: "David Fincher",
-    description: "An insomniac office worker and a devil-may-care soap maker form an underground fight club."
+    description: "An insomniac office worker and a devil-may-care soap maker form an underground fight club.",
+    contentWarnings: ["violence", "self-harm", "substance use", "psychological themes"]
   },
   {
     title: "Inception",
@@ -18,7 +19,8 @@ const MOVIE_DATABASE = [
     keywords: ["dreams", "mind-bending", "heist", "psychological", "twist-ending"],
     actors: ["Leonardo DiCaprio", "Joseph Gordon-Levitt", "Ellen Page", "Tom Hardy"],
     director: "Christopher Nolan",
-    description: "A thief who steals corporate secrets through dream-sharing technology is given the task of planting an idea."
+    description: "A thief who steals corporate secrets through dream-sharing technology is given the task of planting an idea.",
+    contentWarnings: ["violence", "psychological themes"]
   },
   {
     title: "The Matrix",
@@ -27,7 +29,8 @@ const MOVIE_DATABASE = [
     keywords: ["virtual reality", "martial arts", "mind-bending", "philosophy", "chosen one"],
     actors: ["Keanu Reeves", "Laurence Fishburne", "Carrie-Anne Moss"],
     director: "The Wachowskis",
-    description: "A computer hacker learns about the true nature of reality and his role in the war against its controllers."
+    description: "A computer hacker learns about the true nature of reality and his role in the war against its controllers.",
+    contentWarnings: ["violence"]
   },
   {
     title: "Interstellar",
@@ -36,7 +39,8 @@ const MOVIE_DATABASE = [
     keywords: ["space", "time", "family", "emotional", "mind-bending", "epic"],
     actors: ["Matthew McConaughey", "Anne Hathaway", "Jessica Chastain"],
     director: "Christopher Nolan",
-    description: "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival."
+    description: "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+    contentWarnings: ["death", "existential themes"]
   },
   {
     title: "Parasite",
@@ -45,7 +49,8 @@ const MOVIE_DATABASE = [
     keywords: ["class", "social commentary", "twist-ending", "dark humor", "psychological"],
     actors: ["Song Kang-ho", "Lee Sun-kyun", "Cho Yeo-jeong"],
     director: "Bong Joon-ho",
-    description: "Greed and class discrimination threaten the newly formed symbiotic relationship between a wealthy family and a destitute clan."
+    description: "Greed and class discrimination threaten the newly formed symbiotic relationship between a wealthy family and a destitute clan.",
+    contentWarnings: ["violence", "abuse"]
   },
   {
     title: "The Shawshank Redemption",
@@ -54,7 +59,8 @@ const MOVIE_DATABASE = [
     keywords: ["prison", "hope", "friendship", "redemption", "emotional"],
     actors: ["Tim Robbins", "Morgan Freeman"],
     director: "Frank Darabont",
-    description: "Two imprisoned men bond over a number of years, finding solace and eventual redemption."
+    description: "Two imprisoned men bond over a number of years, finding solace and eventual redemption.",
+    contentWarnings: ["violence", "abuse"]
   },
   {
     title: "Pulp Fiction",
@@ -63,7 +69,8 @@ const MOVIE_DATABASE = [
     keywords: ["nonlinear", "violence", "dialogue", "dark humor", "cult classic"],
     actors: ["John Travolta", "Uma Thurman", "Samuel L. Jackson"],
     director: "Quentin Tarantino",
-    description: "The lives of two mob hitmen, a boxer, and others intertwine in four tales of violence and redemption."
+    description: "The lives of two mob hitmen, a boxer, and others intertwine in four tales of violence and redemption.",
+    contentWarnings: ["violence", "sexual content", "substance use"]
   },
   {
     title: "The Dark Knight",
@@ -72,7 +79,8 @@ const MOVIE_DATABASE = [
     keywords: ["superhero", "villain", "psychological", "dark", "moral dilemma"],
     actors: ["Christian Bale", "Heath Ledger", "Aaron Eckhart"],
     director: "Christopher Nolan",
-    description: "Batman must accept one of the greatest psychological and physical tests to fight injustice."
+    description: "Batman must accept one of the greatest psychological and physical tests to fight injustice.",
+    contentWarnings: ["violence"]
   },
   {
     title: "Spirited Away",
@@ -81,7 +89,8 @@ const MOVIE_DATABASE = [
     keywords: ["magical", "coming of age", "spirits", "beautiful", "emotional"],
     actors: [],
     director: "Hayao Miyazaki",
-    description: "A young girl becomes trapped in a strange new world of spirits and must find a way to free herself and her parents."
+    description: "A young girl becomes trapped in a strange new world of spirits and must find a way to free herself and her parents.",
+    contentWarnings: []
   },
   {
     title: "Get Out",
@@ -90,7 +99,8 @@ const MOVIE_DATABASE = [
     keywords: ["psychological", "social commentary", "twist-ending", "suspense"],
     actors: ["Daniel Kaluuya", "Allison Williams", "Bradley Whitford"],
     director: "Jordan Peele",
-    description: "A young African-American visits his white girlfriend's parents, uncovering a disturbing secret."
+    description: "A young African-American visits his white girlfriend's parents, uncovering a disturbing secret.",
+    contentWarnings: ["violence", "psychological horror", "abuse"]
   },
   {
     title: "Mad Max: Fury Road",
@@ -99,7 +109,8 @@ const MOVIE_DATABASE = [
     keywords: ["post-apocalyptic", "chase", "feminist", "visual spectacle", "practical effects"],
     actors: ["Tom Hardy", "Charlize Theron", "Nicholas Hoult"],
     director: "George Miller",
-    description: "In a post-apocalyptic wasteland, a woman rebels against a tyrannical ruler with the help of a drifter."
+    description: "In a post-apocalyptic wasteland, a woman rebels against a tyrannical ruler with the help of a drifter.",
+    contentWarnings: ["violence"]
   },
   {
     title: "Everything Everywhere All at Once",
@@ -108,7 +119,8 @@ const MOVIE_DATABASE = [
     keywords: ["multiverse", "family", "absurd", "emotional", "mind-bending", "martial arts"],
     actors: ["Michelle Yeoh", "Stephanie Hsu", "Ke Huy Quan"],
     director: "Daniels",
-    description: "An aging Chinese immigrant must connect with parallel universe versions of herself to prevent destruction."
+    description: "An aging Chinese immigrant must connect with parallel universe versions of herself to prevent destruction.",
+    contentWarnings: ["violence", "family trauma"]
   },
   {
     title: "John Wick",
@@ -117,7 +129,8 @@ const MOVIE_DATABASE = [
     keywords: ["revenge", "martial arts", "stylish", "violence", "assassin"],
     actors: ["Keanu Reeves", "Michael Nyqvist", "Alfie Allen"],
     director: "Chad Stahelski",
-    description: "An ex-hitman comes out of retirement to track down the gangsters who killed his dog."
+    description: "An ex-hitman comes out of retirement to track down the gangsters who killed his dog.",
+    contentWarnings: ["violence", "animal death"]
   },
   {
     title: "La La Land",
@@ -126,7 +139,8 @@ const MOVIE_DATABASE = [
     keywords: ["musical", "dreams", "love", "jazz", "bittersweet", "beautiful"],
     actors: ["Ryan Gosling", "Emma Stone"],
     director: "Damien Chazelle",
-    description: "A jazz musician and an aspiring actress fall in love while pursuing their dreams in Los Angeles."
+    description: "A jazz musician and an aspiring actress fall in love while pursuing their dreams in Los Angeles.",
+    contentWarnings: []
   },
   {
     title: "The Grand Budapest Hotel",
@@ -135,7 +149,8 @@ const MOVIE_DATABASE = [
     keywords: ["quirky", "visual style", "murder mystery", "whimsical", "ensemble"],
     actors: ["Ralph Fiennes", "Tony Revolori", "Saoirse Ronan"],
     director: "Wes Anderson",
-    description: "A legendary concierge and his protégé become entangled in a murder case at a famous hotel."
+    description: "A legendary concierge and his protégé become entangled in a murder case at a famous hotel.",
+    contentWarnings: ["violence"]
   },
   {
     title: "Knives Out",
@@ -144,7 +159,8 @@ const MOVIE_DATABASE = [
     keywords: ["whodunit", "twist-ending", "ensemble", "clever", "dark humor"],
     actors: ["Daniel Craig", "Ana de Armas", "Chris Evans"],
     director: "Rian Johnson",
-    description: "A detective investigates the death of a patriarch of an eccentric, combative family."
+    description: "A detective investigates the death of a patriarch of an eccentric, combative family.",
+    contentWarnings: ["death"]
   },
   {
     title: "Spider-Man: Into the Spider-Verse",
@@ -153,7 +169,8 @@ const MOVIE_DATABASE = [
     keywords: ["superhero", "multiverse", "coming of age", "visual style", "family"],
     actors: [],
     director: "Peter Ramsey",
-    description: "Teen Miles Morales becomes Spider-Man and must join others from different dimensions to save all realities."
+    description: "Teen Miles Morales becomes Spider-Man and must join others from different dimensions to save all realities.",
+    contentWarnings: ["violence"]
   },
   {
     title: "Whiplash",
@@ -162,7 +179,8 @@ const MOVIE_DATABASE = [
     keywords: ["intense", "jazz", "obsession", "psychological", "mentor"],
     actors: ["Miles Teller", "J.K. Simmons"],
     director: "Damien Chazelle",
-    description: "A young drummer enrolls at a music conservatory where his teacher pushes students beyond their limits."
+    description: "A young drummer enrolls at a music conservatory where his teacher pushes students beyond their limits.",
+    contentWarnings: ["abuse"]
   },
   {
     title: "Dune",
@@ -171,7 +189,8 @@ const MOVIE_DATABASE = [
     keywords: ["epic", "space", "political", "visual spectacle", "chosen one"],
     actors: ["Timothée Chalamet", "Rebecca Ferguson", "Zendaya", "Oscar Isaac"],
     director: "Denis Villeneuve",
-    description: "A noble family becomes embroiled in a war for control over the galaxy's most valuable resource."
+    description: "A noble family becomes embroiled in a war for control over the galaxy's most valuable resource.",
+    contentWarnings: ["violence", "war"]
   },
   {
     title: "The Social Network",
@@ -180,7 +199,8 @@ const MOVIE_DATABASE = [
     keywords: ["technology", "betrayal", "ambition", "dialogue", "fast-paced"],
     actors: ["Jesse Eisenberg", "Andrew Garfield", "Justin Timberlake"],
     director: "David Fincher",
-    description: "The story of the founding of Facebook and the resulting lawsuits."
+    description: "The story of the founding of Facebook and the resulting lawsuits.",
+    contentWarnings: []
   }
 ];
 
@@ -198,6 +218,22 @@ const YOUTUBE_RECOMMENDATIONS = [
 
 function normalizeString(str) {
   return str.toLowerCase().trim();
+}
+
+function normalizeList(list = []) {
+  return list.map(item => normalizeString(item)).filter(Boolean);
+}
+
+function getTriggerWarnings(movie, triggerSet) {
+  if (!triggerSet || triggerSet.size === 0) {
+    return [];
+  }
+  const warnings = movie.contentWarnings || [];
+  const matched = warnings.filter(warning => triggerSet.has(normalizeString(warning)));
+  if (triggerSet.has('mature themes') && warnings.length > 0) {
+    matched.push('mature themes');
+  }
+  return [...new Set(matched)];
 }
 
 function findDirectOverlaps(person1, person2) {
@@ -333,6 +369,10 @@ function scoreMovie(movie, person1, person2) {
 
 function generateRecommendations(person1, person2) {
   const overlaps = findDirectOverlaps(person1, person2);
+  const combinedTriggers = new Set([
+    ...normalizeList(person1.triggers),
+    ...normalizeList(person2.triggers)
+  ]);
 
   // Score all movies in our database
   const scoredMovies = MOVIE_DATABASE.map(movie => scoreMovie(movie, person1, person2))
@@ -368,7 +408,8 @@ function generateRecommendations(person1, person2) {
       genres: result.movie.genres,
       description: result.movie.description,
       explanation: explanation.trim(),
-      matchScore: Math.min(100, Math.round((result.score / 10) * 100))
+      matchScore: Math.min(100, Math.round((result.score / 10) * 100)),
+      warnings: getTriggerWarnings(result.movie, combinedTriggers)
     };
   });
 
@@ -379,7 +420,8 @@ function generateRecommendations(person1, person2) {
       title: `Shared Interest: ${overlaps.youtubers[0]}`,
       description: `You both enjoy ${overlaps.youtubers[0]}! Consider watching their content together.`,
       explanation: `Direct overlap - you both listed this creator!`,
-      matchScore: 100
+      matchScore: 100,
+      warnings: []
     });
   }
 
@@ -389,7 +431,8 @@ function generateRecommendations(person1, person2) {
       title: `Shared Music: ${overlaps.musicians[0]}`,
       description: `You both love ${overlaps.musicians[0]}! Perfect for background music or a concert.`,
       explanation: `Direct overlap - you both listed this artist!`,
-      matchScore: 100
+      matchScore: 100,
+      warnings: []
     });
   }
 

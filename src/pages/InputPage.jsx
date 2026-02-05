@@ -10,6 +10,20 @@ const GENRES = [
   'Romance', 'Science Fiction', 'Thriller', 'War', 'Western'
 ];
 
+const TRIGGER_SUGGESTIONS = [
+  'violence',
+  'sexual content',
+  'abuse',
+  'self-harm',
+  'substance use',
+  'gore',
+  'death',
+  'psychological horror',
+  'animal death',
+  'war',
+  'mature themes'
+];
+
 function InputPage() {
   const navigate = useNavigate();
   const { currentPerson, person1, person2, updatePerson1, updatePerson2 } = usePreferences();
@@ -25,6 +39,7 @@ function InputPage() {
   const [youtubers, setYoutubers] = useState(currentData.youtubers);
   const [streamers, setStreamers] = useState(currentData.streamers);
   const [musicians, setMusicians] = useState(currentData.musicians);
+  const [triggers, setTriggers] = useState(currentData.triggers);
 
   if (!currentPerson) {
     navigate('/');
@@ -49,6 +64,7 @@ function InputPage() {
       youtubers,
       streamers,
       musicians,
+      triggers,
       completed: true
     });
     navigate('/');
@@ -147,6 +163,38 @@ function InputPage() {
           tags={musicians}
           setTags={setMusicians}
         />
+
+        <div className="section-divider">
+          <span>Content Safety</span>
+        </div>
+
+        <TagInput
+          label="Topics to avoid (optional)"
+          placeholder="e.g., violence, abuse..."
+          tags={triggers}
+          setTags={setTriggers}
+        />
+
+        <div className="input-section">
+          <label>Quick add topics</label>
+          <div className="trigger-grid">
+            {TRIGGER_SUGGESTIONS.map(topic => (
+              <button
+                key={topic}
+                className={`trigger-chip ${triggers.includes(topic) ? 'selected' : ''}`}
+                onClick={() => {
+                  setTriggers(prev =>
+                    prev.includes(topic)
+                      ? prev.filter(item => item !== topic)
+                      : [...prev, topic]
+                  );
+                }}
+              >
+                {topic}
+              </button>
+            ))}
+          </div>
+        </div>
 
         <button
           className={`submit-button ${!hasEnoughData ? 'disabled' : ''}`}

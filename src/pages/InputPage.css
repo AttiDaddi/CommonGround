@@ -100,6 +100,12 @@
   gap: 0.5rem;
 }
 
+.trigger-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
 .genre-chip {
   background: #1a1a1a;
   border: 1px solid #333;
@@ -120,6 +126,28 @@
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   border-color: transparent;
   color: white;
+}
+
+.trigger-chip {
+  background: rgba(244, 114, 182, 0.1);
+  border: 1px solid rgba(244, 114, 182, 0.4);
+  border-radius: 20px;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #f9a8d4;
+}
+
+.trigger-chip:hover {
+  border-color: #f472b6;
+  color: #f472b6;
+}
+
+.trigger-chip.selected {
+  background: linear-gradient(135deg, #f472b6 0%, #fb7185 100%);
+  border-color: transparent;
+  color: #1f1f1f;
 }
 
 .submit-button {
@@ -189,6 +217,12 @@
     min-height: 40px;
   }
 
+  .trigger-chip {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+    min-height: 40px;
+  }
+
   .genre-chip:active {
     transform: scale(0.95);
   }
@@ -226,6 +260,12 @@
     background: #f0f0f0;
     border-color: #ddd;
     color: #666;
+  }
+
+  .trigger-chip {
+    background: rgba(244, 114, 182, 0.08);
+    border-color: rgba(244, 114, 182, 0.3);
+    color: #b91c1c;
   }
 
   .back-button {

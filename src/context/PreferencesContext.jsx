@@ -12,6 +12,7 @@ export function PreferencesProvider({ children }) {
     youtubers: [],
     streamers: [],
     musicians: [],
+    triggers: [],
     completed: false
   });
 
@@ -24,6 +25,7 @@ export function PreferencesProvider({ children }) {
     youtubers: [],
     streamers: [],
     musicians: [],
+    triggers: [],
     completed: false
   });
 
@@ -47,6 +49,7 @@ export function PreferencesProvider({ children }) {
       youtubers: [],
       streamers: [],
       musicians: [],
+      triggers: [],
       completed: false
     });
     setPerson2({
@@ -58,6 +61,7 @@ export function PreferencesProvider({ children }) {
       youtubers: [],
       streamers: [],
       musicians: [],
+      triggers: [],
       completed: false
     });
     setCurrentPerson(null);
